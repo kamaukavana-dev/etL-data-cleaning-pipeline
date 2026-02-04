@@ -1,153 +1,261 @@
-🚀 Project Overview
+🚀 Data Quality Automation Pipeline
+Clean • Validate • Analyze • Report • Notify
 
-This project is a configurable data quality pipeline designed to clean, validate, analyze, and report on CSV/Excel datasets at scale.
+Dockerized • Config-Driven • Async • Production-Style
 
-It automatically:
+<div align="center"> <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=3500&pause=900&color=00F7FF&center=true&vCenter=true&width=1400&lines=Enterprise-Style+Data+Quality+Automation;Clean+Dirty+Data+at+Scale;Reports+%7C+Alerts+%7C+Docker+Ready" /> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=160&section=header&text=Data+Quality+Automation&fontSize=48&fontColor=ffffff" /> </div>
+🏷️ Trust & Technology Badges
+<div align="center">
 
-Cleans invalid records (emails, phone numbers, dates, numeric fields)
 
-Tracks drop rates and data quality metrics
 
-Generates structured Excel reports
 
-Sends email notifications and alerts based on thresholds
 
-Runs locally, as a standalone executable, or inside Docker
 
-Built for real-world datasets, not toy examples.
 
-🧠 Why This Project Exists
 
-Dirty data silently destroys decisions.
 
-This pipeline ensures:
 
-Transparency → You know what was dropped and why
 
-Automation → No manual cleaning
 
-Accountability → Reports + logs + alerts
 
-Scalability → Handles large files consistently
 
-🛠️ Core Features
 
-✅ CSV & Excel ingestion
-✅ Data validation & cleaning
-✅ Drop-rate analysis & severity scoring
-✅ Excel report generation
-✅ Automated email notifications
-✅ Config-driven thresholds
-✅ Async pipeline execution
-✅ Docker & PyInstaller support
-✅ Logging & audit trail
 
-📦 Deployment Options
-Mode	Target User	Description
-Manual Run	Analysts / Individuals	Run locally using Python
-Standalone EXE	Non-technical users	One-click execution (PyInstaller)
-Dockerized	Teams / Enterprises	Consistent, repeatable execution
-🏗️ Architecture Overview
-data/
- ├── raw/            # Input CSV / Excel files
- ├── cleaned/        # Cleaned outputs
- └── reports/        # Analysis reports
 
-src/
- ├── main.py         # Pipeline entry point
- ├── cleaners/       # Validation & cleaning logic
- ├── reporting/      # Excel report generation
- ├── notifications/ # Email & alert system
- └── utils/          # Shared utilities
 
-configs/
- ├── client_basic.env
- ├── client_email.env
- └── client_enterprise.env
 
-⚙️ Configuration (Environment-Driven)
 
-All behavior is controlled via .env files:
+
+
+</div>
+🌍 Project Overview
+
+This project is a fully automated data-quality pipeline designed to process real-world dirty datasets with zero manual intervention.
+
+It ingests CSV / Excel files, validates them against strict rules, cleans invalid data, generates professional Excel reports, and sends automated email alerts based on configurable thresholds.
+
+This is not a demo script.
+It is designed to behave like a real production pipeline.
+
+❌ The Problem
+
+Most datasets in the real world are:
+
+Inconsistent
+
+Partially invalid
+
+Poorly formatted
+
+Silently broken
+
+Manual cleaning does not scale.
+
+✅ The Solution
+
+This pipeline enforces data discipline through:
+
+Deterministic validation rules
+
+Transparent row-level drops
+
+Quantitative quality metrics
+
+Automated notifications
+
+Reproducible execution
+
+🧠 Core Capabilities
+🔍 Validation Engine
+
+Email format validation
+
+Phone number validation
+
+Numeric field validation
+
+Date parsing & validation
+
+Missing required column detection
+
+Unexpected column detection
+
+🧹 Cleaning Engine
+
+Row-level filtering
+
+Consistent rule application
+
+Full drop accounting
+
+📊 Analytics Layer
+
+Drop-rate calculation
+
+Severity classification
+
+Threshold comparison
+
+Dataset health scoring
+
+📈 Reporting System
+
+Auto-generated Excel reports
+
+Summary sheets
+
+Validation breakdowns
+
+Time-stamped outputs
+
+📧 Notification Engine
+
+SMTP-based email alerts
+
+Configurable recipients
+
+Severity-based warnings
+
+Instant delivery
+
+🖼️ Visual Pipeline Architecture
+┌───────────────────┐
+│   Raw Data File   │  CSV / Excel
+└─────────┬─────────┘
+          ↓
+┌───────────────────┐
+│   Validation      │
+│ Emails | Phones   │
+│ Dates  | Numbers  │
+└─────────┬─────────┘
+          ↓
+┌───────────────────┐
+│   Cleaning        │
+│ Drop Invalid Rows │
+└─────────┬─────────┘
+          ↓
+┌───────────────────┐
+│   Analysis        │
+│ Drop Rates        │
+│ Severity          │
+└─────────┬─────────┘
+          ↓
+┌───────────────────┐
+│   Reporting       │
+│ Excel Outputs     │
+└─────────┬─────────┘
+          ↓
+┌───────────────────┐
+│   Notifications   │
+│ Email Alerts      │
+└───────────────────┘
+
+🗂️ Project Structure (Production-Style)
+workproject/
+│
+├── data/
+│   ├── raw/                # Client input files
+│   ├── cleaned/            # Cleaned outputs
+│   └── reports/            # Excel analysis reports
+│
+├── src/
+│   ├── main.py             # Entry point
+│   ├── pipeline/           # Async orchestration
+│   ├── validators/         # Validation rules
+│   ├── cleaners/           # Cleaning logic
+│   ├── analysis/           # Metrics & severity
+│   ├── reporting/          # Excel generation
+│   ├── notifications/      # Email system
+│   └── utils/              # Shared utilities
+│
+├── configs/
+│   ├── client_basic.env
+│   ├── client_email.env
+│   └── client_enterprise.env
+│
+├── Dockerfile
+├── requirements.txt
+└── README.md
+
+⚙️ Configuration-Driven Design
+
+Each client uses their own environment file.
 
 DATA_FILE=data/raw/input.csv
-RECIPIENT_EMAIL=alerts@company.com
+
 DROP_RATE_THRESHOLD=50
 INVALID_EMAIL_THRESHOLD=1000
+INVALID_PHONE_THRESHOLD=1500
+
+SEND_EMAIL=true
+RECIPIENT_EMAIL=alerts@company.com
+
 DRY_RUN=false
 
 
-✔ No hardcoded client data
-✔ Easy per-client customization
-✔ Safe for production use
+✔ No hard-coded values
+✔ Safe for multiple clients
+✔ Easy to audit & customize
 
-▶️ Running the Pipeline
-Local (Python)
-CLIENT_ENV=configs/client_email.env python -m src.main
+▶️ Execution Options
+🐍 Local Python
+CLIENT_ENV=configs/client_basic.env python -m src.main
 
-Docker
-docker build -t data-pipeline .
-docker run --env-file configs/client_enterprise.env data-pipeline
+🐳 Docker (Recommended)
+docker build -t data-quality-pipeline .
+docker run --env-file configs/client_enterprise.env data-quality-pipeline
 
-Standalone (EXE)
-Double-click the executable → pipeline runs automatically
+🖥️ Standalone Executable
 
-📧 Email & Alerting
+Built with PyInstaller
 
-The pipeline automatically sends:
+No Python required
 
-Summary reports
+One-click execution for non-technical clients
 
-Drop-rate warnings
+📬 Real Execution Example
+rows=10000 → 3513
+drop_rate=64.87%
+severity=HIGH ⚠️
+report=analysis_report_20260203_163521.xlsx
+email_status=SENT
 
-Data quality alerts
 
-Severity levels:
+✔ Logs generated
+✔ Report saved
+✔ Email delivered instantly
 
-🟢 LOW
+🔐 Reliability & Safety
 
-🟡 MEDIUM
+Explicit exception handling
 
-🔴 HIGH
+No silent failures
 
-Example log output:
+Threshold-based alerts
 
-rows=10000 → 3513 | drop_rate=64.87% | severity=HIGH ⚠️
+Deterministic output
 
-📊 Sample Output
+Full logging trail
 
-✔ Cleaned Excel file
-✔ Detailed analysis report
-✔ Logged validation metrics
-✔ Email notification (instant)
-
-🔒 Reliability & Safety
-
-Defensive validation
-
-Explicit error handling
-
-Logged failures
-
-No silent data loss
-
-Async-safe execution
-
-🧪 Testing
+🧪 Quality & Testing
 pytest tests/
 
 
-Includes:
+Test coverage includes:
 
-Pipeline execution tests
+Validation accuracy
 
-Validation behavior checks
+Pipeline execution
 
-Failure-mode handling
+Failure scenarios
 
-🧰 Tech Stack
-<div align="center"> <img src="https://skillicons.dev/icons?i=python,docker,github,linux" /> </div>
+Config parsing
 
-Python 3
+🧰 Technology Stack
+<div align="center"> <img src="https://skillicons.dev/icons?i=python,docker,linux,github,vscode" /> </div>
+
+Python 3.10+
 
 Pandas
 
@@ -157,26 +265,26 @@ Docker
 
 PyInstaller
 
-SMTP / Email
+SMTP
 
 Pytest
 
-📌 Intended Use Cases
+🎯 Use Cases
 
-Data cleaning services
-
-Analytics preprocessing
+Freelance data cleaning
 
 Client data audits
 
-Automated reporting pipelines
+Analytics preprocessing
 
-Internal data quality monitoring
+Automated data checks
+
+Internal pipelines
 
 👤 Author
 
 Daniel Maina
-Aspiring Full-Stack Engineer & Automation Enthusiast
+Aspiring Full-Stack Engineer,Cloud Architect & Automation Enthusiast🤖
 📍 Nairobi, Kenya
 
 📧 Email: kavana.daniel1@gmail.com
@@ -185,12 +293,13 @@ Aspiring Full-Stack Engineer & Automation Enthusiast
 
 🐙 GitHub: https://github.com/kamaukavana-dev
 
+Built as a project with real engineering discipline.
+
 📄 License
 
-MIT License — free to use, modify, and extend.
+MIT License — free to use, extend, and modify.
 
-<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&reversal=true" />
-
-Built with discipline, curiosity, and real datasets.
-
+<div align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=140&section=footer&reversal=true" />
+Clean Data Is Not Optional.
+Automate It.
 </div>
