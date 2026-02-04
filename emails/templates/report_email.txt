@@ -1,0 +1,13 @@
+
+
+Hello ${CLIENT_NAME},
+
+Please find attached your latest data analysis report for the ${EMAIL_FREQUENCY} period.
+
+The report includes summary statistics, correlations, and a multi-sheet Excel file with all processed data.
+
+If you have any questions or need assistance, feel free to contact our support team.
+
+Best regards,
+Accounts Department
+Motor Spares

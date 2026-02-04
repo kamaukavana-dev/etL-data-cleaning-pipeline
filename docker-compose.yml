@@ -1,0 +1,11 @@
+
+services:
+  pipeline:
+    build: .
+    container_name: mypipeline
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    command: python -m src.main
+    restart: unless-stopped

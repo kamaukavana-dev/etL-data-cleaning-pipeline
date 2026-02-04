@@ -1,0 +1,38 @@
+# --- Python virtual environments ---
+.venv/
+venv/
+
+# --- Python cache and compiled files ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Build / Packaging (PyInstaller, setuptools, etc.) ---
+build/
+dist/
+*.spec
+
+# --- Logs ---
+*.log
+
+# --- Environment variables ---
+.env
+
+# --- Docker runtime files ---
+*.pid
+*.sock
+volumes/
+
+# --- OS / Editor junk ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Jupyter notebooks checkpoints (optional) ---
+.ipynb_checkpoints/
+
+# --- Testing / Coverage (optional) ---
+.coverage
+htmlcov/
