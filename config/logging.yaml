@@ -1,0 +1,14 @@
+version: 1
+disable_existing_loggers: false
+formatters:
+  json:
+    (): src.core.logging.JsonFormatter
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: json
+    stream: ext://sys.stdout
+root:
+  level: INFO
+  handlers: [console]

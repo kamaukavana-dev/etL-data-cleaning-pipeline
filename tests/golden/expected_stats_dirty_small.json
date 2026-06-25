@@ -1,0 +1,9 @@
+{
+  "original_rows": 3,
+  "final_rows": 2,
+  "duplicates_dropped": 0,
+  "invalid_emails_dropped": 1,
+  "invalid_phones_dropped": 0,
+  "invalid_numbers_dropped": 0,
+  "invalid_dates_dropped": 0
+}

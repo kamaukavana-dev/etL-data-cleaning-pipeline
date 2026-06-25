@@ -1,0 +1,20 @@
+{"timestamp": "2026-05-19T09:18:13.471291+00:00", "level": "INFO", "logger": "etl.ingestion", "message": "Ingestion start.", "module": "ingestion_service", "funcName": "load", "line": 84}
+------------------------------ Captured log call -------------------------------
+INFO     etl.ingestion:ingestion_service.py:68 XLSX to CSV conversion completed in 10.00ms
+INFO     etl.ingestion:ingestion_service.py:84 Ingestion start.
+________________ test_validation_drops_invalid_rows_vectorized _________________
+tests/unit/test_validation_service.py:34: in test_validation_drops_invalid_rows_vectorized
+    assert result.stats.original_rows == 3
+           ^^^^^^^^^^^^
+E   AttributeError: 'tuple' object has no attribute 'stats'
+----------------------------- Captured stdout call -----------------------------
+DEBUG: dedupe_dropped=0, invalid_email=1, invalid_phone=1, invalid_salary=1, invalid_date=1
+{"timestamp": "2026-05-19T09:18:13.521337+00:00", "level": "INFO", "logger": "etl.validation", "message": "Validation completed.", "module": "validation_service", "funcName": "validate_and_clean", "line": 209, "stage": "validation"}
+------------------------------ Captured log call -------------------------------
+INFO     etl.validation:validation_service.py:209 Validation completed.
+=========================== short test summary info ============================
+FAILED tests/unit/test_edge_cases.py::test_validation_empty_dataframe - Attri...
+FAILED tests/unit/test_golden_validation.py::test_golden_validation_stats - A...
+FAILED tests/unit/test_ingestion_service.py::test_excel_combine_mode_returns_dataframe
+FAILED tests/unit/test_validation_service.py::test_validation_drops_invalid_rows_vectorized
+4 failed, 10 passed in 1.43s

@@ -1,0 +1,30 @@
+# Virtual environments — NEVER commit these
+.venv/
+venv/
+env/
+ENV/
+
+# Data files
+data/raw/*.csv
+data/raw/*.xlsx
+logs/data/
+*.csv
+*.xlsx
+!tests/fixtures/*.csv
+!tests/golden/*.json
+
+# Logs and runtime artifacts
+logs/
+*.log
+tmp/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Jar/binary downloads
+*.jar
+
+# IDE state (IntelliJ)
+.idea/

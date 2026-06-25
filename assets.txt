@@ -1,0 +1,6 @@
+./assets/screenshots
+./assets/screenshots/automate.png
+./assets/screenshots/Email Verification Tools.jpg
+./assets/screenshots/excel_file.png
+./assets/screenshots/Microsoft Excel.jpg
+./assets/screenshots/What is Email Marketing Automation_.jpg

@@ -1,0 +1,24 @@
+APP_ENV=<redacted>
+CLIENT_NAME=<redacted>
+DATA_FILE=<redacted>
+DRY_RUN=<redacted>
+
+# Optional CSV streaming controls
+ENABLE_STREAMING_FOR_CSV=<redacted>
+CSV_CHUNK_SIZE=<redacted>
+STREAM_FILE_SIZE_MB_THRESHOLD=<redacted>
+
+# Logging / observability
+LOG_LEVEL=<redacted>
+JSON_LOGS=<redacted>
+SENTRY_DSN=<redacted>
+OTEL_EXPORTER_OTLP_ENDPOINT=<redacted>
+
+# Optional SMTP integration (leave blank to disable notifications)
+SMTP_SERVER=<redacted>
+SMTP_PORT=<redacted>
+SMTP_USER=<redacted>
+SMTP_PASSWORD=<redacted>
+SENDER_EMAIL=<redacted>
+RECIPIENT_EMAIL=<redacted>
+ALERT_EMAIL=<redacted>

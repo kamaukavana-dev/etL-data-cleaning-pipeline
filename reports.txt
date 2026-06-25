@@ -1,0 +1,15 @@
+data/exports/:
+total 294624
+drwxrwxr-x 2 kavana-daniel kavana-daniel      4096 May 16 18:37 .
+drwxrwxr-x 6 kavana-daniel kavana-daniel      4096 May 16 14:59 ..
+-rw-rw-r-- 1 kavana-daniel kavana-daniel   1190462 May 16 16:14 cleaned_stream_a080227f-de7b-49c1-8e99-d17e6d86c44b.csv
+-rw-rw-r-- 1 kavana-daniel kavana-daniel 161148985 May 16 18:29 cleaned_stream_a49d2f6d-93bd-4868-baeb-60e63d98412e.csv
+-rw-rw-r-- 1 kavana-daniel kavana-daniel 139334691 May 16 16:45 cleaned_stream_ab327210-321b-4af9-b2ce-48820dd679e3.csv
+
+data/reports/:
+total 44
+drwxrwxr-x 2 kavana-daniel kavana-daniel 4096 May 16 18:36 .
+drwxrwxr-x 6 kavana-daniel kavana-daniel 4096 May 16 14:59 ..
+-rw-rw-r-- 1 kavana-daniel kavana-daniel 9553 May 16 16:54 analysis_report_e1578e3c-c550-4373-a45f-b66b0ee00fda.xlsx
+-rw-rw-r-- 1 kavana-daniel kavana-daniel 8652 May 16 16:50 analysis_report_e1c19359-440e-47e9-9a22-e1e8f6166c4c.xlsx
+-rw-rw-r-- 1 kavana-daniel kavana-daniel 8653 May 16 16:53 analysis_report_f7004935-421b-497e-9f68-ebaa63f18820.xlsx

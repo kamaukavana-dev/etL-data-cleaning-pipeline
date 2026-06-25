@@ -1,0 +1,14 @@
+services:
+  etl:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: enterprise-etl
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./tmp:/app/tmp
+    command: ["python", "-m", "src.main"]
+    restart: "no"

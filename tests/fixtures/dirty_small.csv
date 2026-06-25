@@ -1,0 +1,4 @@
+id,name,email,phone,salary,date_joined
+1,Alice,a@example.com,+1234567890,100,2024-01-01
+2,Bob,broken,+1,100,2024-01-01
+3,Carol,c@example.com,+1234567899,200,2024-01-02

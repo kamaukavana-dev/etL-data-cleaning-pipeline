@@ -1,0 +1,13 @@
+thresholds:
+  drop_rate:
+    low: 0.10
+    medium: 0.30
+    high: 0.50
+  alerts:
+    drop_rate: 0.50
+    invalid_emails: 1000
+    invalid_phones: 1500
+  severity_labels:
+    low: "LOW"
+    medium: "MEDIUM"
+    high: "HIGH"

@@ -1,0 +1,33 @@
+.git
+.gitignore
+.idea
+.vscode
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local virtual environments
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Runtime outputs
+logs/
+tmp/
+data/processed/
+data/reports/
+data/exports/
+src/logs/
+
+# Build/cache noise
+build/
+dist/
+*.egg-info/

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/kavana-daniel/Documents/etL-data-cleaning-pipeline/test_chunk_diff.py", line 5, in <module>
+    config = AppConfig()
+             ^^^^^^^^^^^
+TypeError: AppConfig.__init__() missing 24 required positional arguments: 'app_name', 'app_version', 'environment', 'client_name', 'dry_run', 'data_file', 'required_columns', 'enable_streaming_for_csv', 'csv_chunk_size', 'stream_file_size_mb_threshold', 'max_report_rows', 'include_cleaned_data_in_report', 'report_mode', 'report_format', 'enable_excel_formatting', 'json_logs', 'log_level', 'sentry_dsn', 'otel_endpoint', 'enable_prometheus_exporter', 'prometheus_port', 'paths', 'smtp', and 'alert_email'
